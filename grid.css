@@ -1,0 +1,129 @@
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+}
+.gtkWindow {
+    background-color: #e5e8e7;
+    border: 1px solid #808080;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin: 0.5rem;
+}
+.gtkHeaderBar {
+    background-color: #e5e8e7;
+    background-image: linear-gradient( 180deg, #f4f4f4 90%, #dbdbd9 100% );
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #91918c;
+    border-radius: 0.9rem 0.9rem 0px 0px;
+    text-align: center;
+    min-height: 2rem;
+    padding: 0.4rem 0.5rem;
+}
+.gtkBtn, .gtkButton, .gtkFlatBtn:focus, .gtkFlatBtn:hover {
+    background-color: #c3c6c5;
+    background-image: linear-gradient(180deg,rgb(237,237,237),#c3c6c5);
+    border-style: solid;
+    border-color: #B6B6B3;
+    border-width: 1px;
+    border-bottom: solid 1px #91918c;
+    border-radius: .3rem;
+    font-style: normal;
+    vertical-align: top;
+}
+.gtkBtn, .gtkFlatBtn, .gtkButton {
+    font-size: 1.0rem;
+    line-height: 1.1rem;
+    font-weight: 300;
+}
+.gtkBtn, .gtkFlatBtn, .gtkButton, .gtkLabel {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    height: 1.2rem;
+    min-width: 1.2rem;
+    padding: .3rem;
+    vertical-align: middle;
+    width: auto;
+}
+.gtkFlatBtn {
+    background: initial;
+    background-color: initial;
+    background-image: initial;
+    margin: 0px 1px;
+    margin-top: 1px;
+    border-width: 0px;
+    border-radius: 0px;
+}
+.btnsCombine {
+    display: inline-block;
+    vertical-align: top;
+}
+.btnPrevSa::after, .btnPrev span::after {
+    content: "⟨⟨";
+}
+.btnNextSa::after, .btnNext span::after {
+    content: "⟩⟩";
+}
+.gtkSubmit, .btnSubmit {
+    background-color: #5682b7;
+    background-image: linear-gradient(180deg,#6f9ccd,#4776b1);
+    color: #fff !important;
+    height: auto;
+}
+.innSpace {
+    padding: 0.8rem !important;
+}
+/* gtkBox main class */
+	.gtkHeaderBar {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+/* gtkBox vertical */
+	.gtkHeaderBar.ver, .gtkHeaderBar.ver.ltr,
+	.gtkHeaderBar.ltr { flex-direction: row; }
+	.gtkHeaderBar.verr, .gtkHeaderBar.ver.rtl,
+	.gtkHeaderBar.rtl { flex-direction: row-reverse; }
+/* gtkBox horizontal */
+	.gtkHeaderBar.hor.ttb,
+	.gtkHeaderBar.ttb { flex-direction: column; }
+	.gtkHeaderBar.btt { flex-direction: column-reverse; }
+
+	.gtkHeaderBar > .putRight + div {
+		flex-basis: 50%;
+		flex-grow: 2;
+		order: 2;
+	}
+	.gtkHeaderBar > .putLeft {
+		order: 1;
+		text-align: left;
+	}
+	.gtkHeaderBar > .putRight {
+		order: 3;
+		text-align: right;
+	}
+	.gtkHeaderBar > .putLeft,
+	.gtkHeaderBar > .putRight {
+		float: none;
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: 25%;
+		min-width: 0;
+	}
+	.putLeft, .putLeft > *,
+	.putRight, .putRight > * {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.putRight {	float: none; min-width: 0; order: 3; }
+
+DIV.gtkHeaderBar > div > h1 { display: block; width: 100%;}
+DIV.gtkHeaderBar > div > h1 + p { display: block; width: 100%;}
+.gtkSeparator {
+	height: auto;
+	margin: 0;
+}
+.gtkBox2 {
+	display: inline-block;
+}
